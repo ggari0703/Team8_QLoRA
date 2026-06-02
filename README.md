@@ -9,20 +9,21 @@
 
 ## 📊 실험 결과 (Mean 5-shot MMLU Accuracy)
 
-| LLaMA Size | Dataset | BFloat16 | Float4 | NFloat4 + DQ |
+| LLaMA Size | Dataset | BFloat16(ours) | Float4(ours) | NFloat4 + DQ(ours) |
 | :--- | :--- | :---: | :---: | :---: |
-| **7B** | Alpaca | 38.4 | 37.2 | **39.0** |
-| | FLAN v2 | 45.6 | 44.0 | **44.5** |
+| **7B** | Alpaca | 38.4(35.3) | 37.2(36.9) | **39.0**(36.4) |
+| | FLAN v2 | 45.6(45.7) | 44.0(35.2) | **44.5**(36.0) |
 | | OASST1 | 35.5 | 36.1 | **34.6** |
-| **13B** | Alpaca | 47.2 | 47.3 | **47.5** |
-| | FLAN v2 | 50.6 | 50.0 | **50.7** |
+| **13B** | Alpaca | 47.2(46.5) | 47.3(46.2) | **47.5**(46.1) |
+| | FLAN v2 | 50.6(41.3) | 50.0(40.9) | **50.7**(43.2) |
 
 > **결론:** 실험 결과 **BFloat16 > NFloat4 + DQ > Float4** 순의 성능 경향을 보이며, 이는 원본 논문의 결과와 일치합니다.
 
 ## 🚀 실험 방법
 본 실험은 아래와 같은 명령어를 통해 수행되었습니다. (예시: LLaMA 7B + Alpaca)
+claude를 코드 작성 및 에러 디버깅에 사용하였습니다.
 
-### 1. NF4 (4bit Normal Float)
+### 1. NFloat4 + DQ
 ```bash
 CUDA_VISIBLE_DEVICES=4 python qlora.py --model_name_or_path huggyllama/llama-7b \
 --dataset alpaca --bf16 True --bits 4 --quant_type nf4 --double_quant True \
@@ -30,3 +31,20 @@ CUDA_VISIBLE_DEVICES=4 python qlora.py --model_name_or_path huggyllama/llama-7b 
 --learning_rate 2e-4 --max_steps 1875 --per_device_train_batch_size 1 \
 --gradient_accumulation_steps 16 --do_eval True --do_mmlu_eval True \
 --output_dir ./results/llama1_7b_nf4_alpaca
+
+### 2. Float4
+```bash
+CUDA_VISIBLE_DEVICES=5 python qlora.py --model_name_or_path huggyllama/llama-7b \
+--dataset alpaca --bf16 True --bits 4 --quant_type nf4 --double_quant True \
+--lora_r 64 --lora_alpha 16 --lora_dropout 0.05 --optim paged_adamw_32bit \
+--learning_rate 2e-4 --max_steps 1875 --per_device_train_batch_size 1 \
+--gradient_accumulation_steps 16 --do_eval True --do_mmlu_eval True \
+--output_dir ./results/llama1_7b_nf4_alpaca
+
+### 3. BFloat16
+```bash
+CUDA_VISIBLE_DEVICES=6,7 python qlora.py --model_name_or_path huggyllama/llama-7b \
+--dataset alpaca --bf16 True --bits 16 --lora_r 64 --lora_alpha 16 --lora_dropout 0.05 --optim paged_adamw_32bit \
+--learning_rate 2e-4 --max_steps 1875 --per_device_train_batch_size 1 --gradient_accumulation_steps 16 \
+--max_memory_MB 20000 --gradient_checkpointing False --do_eval True --do_mmlu_eval True --mmlu_dataset mmlu-fs \
+--mmlu_split test --output_dir ./results/llama1_7b_bf16_alpaca
