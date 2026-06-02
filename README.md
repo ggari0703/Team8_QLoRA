@@ -8,9 +8,9 @@
 * **평가 지표:** Mean 5-shot MMLU Accuracy (57개 과목 대상)
 * **모델:** LLaMA (7B, 13B)
 * **데이터셋:** Alpaca dataset, FLAN v2 dataset, OASST dataset(7B)
-*** Alpaca dataset - 52,002개 GPT-3.5로 생성한 instruction 데이터. 다양한 태스크 포함
-*** FLAN v2 dataset - 구글이 만든 대규모 instruction 데이터. 지식/추론 중심, 서브샘플링 한 450,000개만 사용
-*** OASST dataset - 19,846개 실제 사람이 만든 고품질 대화 데이터
+*  Alpaca dataset - 52,002개 GPT-3.5로 생성한 instruction 데이터. 다양한 태스크 포함
+*  FLAN v2 dataset - 구글이 만든 대규모 instruction 데이터. 지식/추론 중심, 서브샘플링 한 450,000개만 사용
+*  OASST dataset - 19,846개 실제 사람이 만든 고품질 대화 데이터
 
 ## 실험 결과 (Mean 5-shot MMLU Accuracy)
 
