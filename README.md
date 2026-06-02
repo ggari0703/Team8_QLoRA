@@ -1,4 +1,5 @@
 # QLoRA Performance Evaluation Project
+## ref: https://github.com/artidoro/qlora
 
 본 프로젝트는 QLoRA(Quantized Low-Rank Adaptation) 논문의 **Table 4** 실험을 재현하여, 4bit 양자화 학습이 16bit(BFloat16) 학습과 비교하여 얼마나 동등한 성능을 보이는지 검증합니다.
 
@@ -25,6 +26,10 @@
 ##  실험 방법
 * 본 실험은 아래와 같은 명령어를 통해 수행되었습니다. (예시: LLaMA 7B + Alpaca)
 * claude를 코드 작성 및 에러 디버깅에 사용하였습니다.
+
+### 0. enviroment settings
+   ```bash
+   pip install -U -r requirements.txt
 
 ### 1. NFloat4 + DQ
     ```bash
