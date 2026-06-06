@@ -1,0 +1,19 @@
+configs:
+- reproduce_table3/configs/glue_bf16_reference/sst2_bf16_lr_1em05.yaml
+- reproduce_table3/configs/glue_bf16_reference/sst2_bf16_lr_2em05.yaml
+- reproduce_table3/configs/glue_bf16_reference/sst2_bf16_lr_3em05.yaml
+- reproduce_table3/configs/glue_bf16_reference/mrpc_bf16_lr_1em05.yaml
+- reproduce_table3/configs/glue_bf16_reference/mrpc_bf16_lr_2em05.yaml
+- reproduce_table3/configs/glue_bf16_reference/mrpc_bf16_lr_3em05.yaml
+- reproduce_table3/configs/glue_bf16_reference/qqp_bf16_lr_1em05.yaml
+- reproduce_table3/configs/glue_bf16_reference/qqp_bf16_lr_2em05.yaml
+- reproduce_table3/configs/glue_bf16_reference/qqp_bf16_lr_3em05.yaml
+- reproduce_table3/configs/glue_bf16_reference/mnli_bf16_lr_1em05.yaml
+- reproduce_table3/configs/glue_bf16_reference/mnli_bf16_lr_2em05.yaml
+- reproduce_table3/configs/glue_bf16_reference/mnli_bf16_lr_3em05.yaml
+- reproduce_table3/configs/glue_bf16_reference/qnli_bf16_lr_1em05.yaml
+- reproduce_table3/configs/glue_bf16_reference/qnli_bf16_lr_2em05.yaml
+- reproduce_table3/configs/glue_bf16_reference/qnli_bf16_lr_3em05.yaml
+- reproduce_table3/configs/glue_bf16_reference/rte_bf16_lr_1em05.yaml
+- reproduce_table3/configs/glue_bf16_reference/rte_bf16_lr_2em05.yaml
+- reproduce_table3/configs/glue_bf16_reference/rte_bf16_lr_3em05.yaml

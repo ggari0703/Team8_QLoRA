@@ -1,0 +1,6 @@
+configs:
+- reproduce_table3/configs/hardware_scope/roberta_large_sst2_bf16.yaml
+- reproduce_table3/configs/hardware_scope/roberta_large_sst2_bf16_replication.yaml
+- reproduce_table3/configs/hardware_scope/roberta_large_sst2_lora_bf16.yaml
+- reproduce_table3/configs/hardware_scope/roberta_large_sst2_qlora_int8.yaml
+- reproduce_table3/configs/hardware_scope/roberta_large_sst2_qlora_fp4.yaml

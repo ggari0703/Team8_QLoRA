@@ -1,0 +1,7 @@
+timestamp,task_group,dataset,model_name,method,quant_type,double_quant,lora_r,lora_alpha,lora_dropout,learning_rate,batch_size,gradient_accumulation_steps,max_train_samples,max_eval_samples,seed,metric_name,metric_value,gpu_memory_peak_mb
+2026-06-01T13:12:27.678623+00:00,roberta_glue,glue/sst2,FacebookAI/roberta-large,bf16,none,False,16,64,0.0,0.0002,2,16,,,42,accuracy,0.5091743119266054,1476.38
+2026-06-01T13:49:01.809930+00:00,roberta_glue,glue/sst2,FacebookAI/roberta-large,bf16,none,False,16,64,0.0,2e-05,8,4,,,42,accuracy,0.9461009174311926,3447.72
+2026-06-01T14:02:48.173494+00:00,roberta_glue,glue/sst2,FacebookAI/roberta-large,bf16_replication,none,False,16,64,0.0,2e-05,8,4,,,42,accuracy,0.9461009174311926,3447.72
+2026-06-01T14:21:53.854035+00:00,roberta_glue,glue/sst2,FacebookAI/roberta-large,lora_bf16,none,False,16,64,0.0,0.0001,8,4,,,42,accuracy,0.9644495412844036,909.43
+2026-06-01T16:34:04.640896+00:00,roberta_glue,glue/sst2,FacebookAI/roberta-large,qlora_int8,int8,False,16,64,0.0,0.0001,8,4,,,42,accuracy,0.9598623853211009,734.74
+2026-06-01T17:02:15.093508+00:00,roberta_glue,glue/sst2,FacebookAI/roberta-large,qlora_fp4,fp4,False,16,64,0.0,0.0001,8,4,,,42,accuracy,0.9598623853211009,609.34

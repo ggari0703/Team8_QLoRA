@@ -1,0 +1,7 @@
+configs:
+- reproduce_table3/configs/sni_local/t5_80m_lora_bf16.yaml
+- reproduce_table3/configs/sni_local/t5_80m_qlora_nf4_dq.yaml
+- reproduce_table3/configs/sni_local/t5_250m_lora_bf16.yaml
+- reproduce_table3/configs/sni_local/t5_250m_qlora_nf4_dq.yaml
+- reproduce_table3/configs/sni_local/t5_780m_lora_bf16.yaml
+- reproduce_table3/configs/sni_local/t5_780m_qlora_nf4_dq.yaml

@@ -1,0 +1,3 @@
+configs:
+- reproduce_table3/configs/glue_bf16_deadline/rte_bf16_lr_2em05_fast.yaml
+- reproduce_table3/configs/glue_bf16_deadline/qnli_bf16_lr_2em05_fast.yaml
