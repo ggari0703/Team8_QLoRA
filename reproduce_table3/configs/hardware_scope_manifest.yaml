@@ -1,0 +1,24 @@
+configs:
+- reproduce_table3/configs/hardware_scope/t5_80m_bf16.yaml
+- reproduce_table3/configs/hardware_scope/t5_80m_bf16_replication.yaml
+- reproduce_table3/configs/hardware_scope/t5_80m_lora_bf16.yaml
+- reproduce_table3/configs/hardware_scope/t5_80m_qlora_int8.yaml
+- reproduce_table3/configs/hardware_scope/t5_80m_qlora_fp4.yaml
+- reproduce_table3/configs/hardware_scope/t5_80m_qlora_nf4_dq.yaml
+- reproduce_table3/configs/hardware_scope/t5_250m_bf16.yaml
+- reproduce_table3/configs/hardware_scope/t5_250m_bf16_replication.yaml
+- reproduce_table3/configs/hardware_scope/t5_250m_lora_bf16.yaml
+- reproduce_table3/configs/hardware_scope/t5_250m_qlora_int8.yaml
+- reproduce_table3/configs/hardware_scope/t5_250m_qlora_fp4.yaml
+- reproduce_table3/configs/hardware_scope/t5_250m_qlora_nf4_dq.yaml
+- reproduce_table3/configs/hardware_scope/t5_780m_bf16.yaml
+- reproduce_table3/configs/hardware_scope/t5_780m_bf16_replication.yaml
+- reproduce_table3/configs/hardware_scope/t5_780m_lora_bf16.yaml
+- reproduce_table3/configs/hardware_scope/t5_780m_qlora_int8.yaml
+- reproduce_table3/configs/hardware_scope/t5_780m_qlora_fp4.yaml
+- reproduce_table3/configs/hardware_scope/t5_780m_qlora_nf4_dq.yaml
+- reproduce_table3/configs/hardware_scope/roberta_large_sst2_bf16.yaml
+- reproduce_table3/configs/hardware_scope/roberta_large_sst2_bf16_replication.yaml
+- reproduce_table3/configs/hardware_scope/roberta_large_sst2_lora_bf16.yaml
+- reproduce_table3/configs/hardware_scope/roberta_large_sst2_qlora_int8.yaml
+- reproduce_table3/configs/hardware_scope/roberta_large_sst2_qlora_fp4.yaml

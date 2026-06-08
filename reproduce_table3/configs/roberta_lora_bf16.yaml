@@ -1,0 +1,31 @@
+task_group: roberta_glue
+model_name_or_path: FacebookAI/roberta-base
+glue_task: sst2
+dataset_name: glue/sst2
+method: lora_bf16
+seed: 42
+max_train_samples: 64
+max_eval_samples: 64
+max_length: 256
+num_labels: 2
+results_csv: reproduce_table3/results/table3_runs.csv
+quantization:
+  load_in_4bit: false
+  load_in_8bit: false
+  quant_type: none
+  double_quant: false
+lora:
+  r: 16
+  alpha: 64
+  dropout: 0.0
+  target_modules: ["query", "value"]
+training:
+  output_dir: reproduce_table3/outputs/roberta_lora_bf16
+  learning_rate: 0.0002
+  per_device_train_batch_size: 8
+  per_device_eval_batch_size: 8
+  gradient_accumulation_steps: 1
+  num_train_epochs: 1
+  max_steps: 10
+  logging_steps: 1
+  bf16: true

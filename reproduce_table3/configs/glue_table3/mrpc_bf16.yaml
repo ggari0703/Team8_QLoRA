@@ -1,0 +1,35 @@
+task_group: roberta_glue
+dataset_name: glue/mrpc
+glue_task: mrpc
+model_name_or_path: FacebookAI/roberta-large
+method: bf16
+seed: 42
+max_length: 128
+results_csv: reproduce_table3/results/table3_glue_table3.csv
+lora:
+  enabled: false
+  r: ''
+  alpha: ''
+  dropout: ''
+quantization:
+  load_in_4bit: false
+  load_in_8bit: false
+  quant_type: none
+  double_quant: false
+training:
+  output_dir: reproduce_table3/outputs/glue_table3/mrpc_bf16
+  overwrite_output_dir: true
+  per_device_train_batch_size: 8
+  per_device_eval_batch_size: 16
+  gradient_accumulation_steps: 4
+  learning_rate: 0.0003
+  num_train_epochs: 20
+  max_steps: -1
+  logging_steps: 100
+  save_strategy: 'no'
+  optim: adamw_torch
+  lr_scheduler_type: linear
+  warmup_ratio: 0.06
+  max_grad_norm: 1.0
+  gradient_checkpointing: false
+  bf16: true

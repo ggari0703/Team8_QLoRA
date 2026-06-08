@@ -1,0 +1,7 @@
+timestamp,task_group,dataset,model_name,method,quant_type,double_quant,lora_r,lora_alpha,lora_dropout,learning_rate,batch_size,gradient_accumulation_steps,max_train_samples,max_eval_samples,seed,metric_name,metric_value,gpu_memory_peak_mb
+2026-06-02T03:39:52.224908+00:00,t5_sni,allenai/natural-instructions-local-50k,google/t5-v1_1-small,lora_bf16,none,False,16,64,0.0,1e-05,16,1,50000,1000,42,rougeL,0.056363655573712215,2441.60
+2026-06-02T04:14:33.026463+00:00,t5_sni,allenai/natural-instructions-local-50k,google/t5-v1_1-small,qlora_nf4_dq,nf4,True,16,64,0.0,1e-05,16,1,50000,1000,42,rougeL,0.07006242529083648,3206.31
+2026-06-02T05:41:31.577973+00:00,t5_sni,allenai/natural-instructions-local-50k,google/t5-v1_1-base,lora_bf16,none,False,16,64,0.0,1e-05,16,1,50000,1000,42,rougeL,0.10131900360163522,5199.90
+2026-06-02T07:24:29.934735+00:00,t5_sni,allenai/natural-instructions-local-50k,google/t5-v1_1-base,qlora_nf4_dq,nf4,True,16,64,0.0,1e-05,16,1,50000,1000,42,rougeL,0.10443818076792843,6268.82
+2026-06-02T10:46:21.894106+00:00,t5_sni,allenai/natural-instructions-local-50k,google/t5-v1_1-large,lora_bf16,none,False,16,64,0.0,1e-05,16,1,50000,1000,42,rougeL,0.20540382676606384,8246.81
+2026-06-02T15:02:24.897628+00:00,t5_sni,allenai/natural-instructions-local-50k,google/t5-v1_1-large,qlora_nf4_dq,nf4,True,16,64,0.0,1e-05,16,1,50000,1000,42,rougeL,0.20087729869488358,9711.19

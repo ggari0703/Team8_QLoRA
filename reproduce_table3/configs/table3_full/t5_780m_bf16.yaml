@@ -1,0 +1,41 @@
+task_group: t5_sni
+model_name_or_path: google/t5-v1_1-large
+model_size_key: t5_780m
+dataset_name: jayelm/natural-instructions
+dataset_config_name: null
+eval_filter_column: eval
+method: bf16
+seed: 42
+max_train_samples: null
+max_eval_samples: null
+source_max_length: 1024
+target_max_length: 128
+generation_max_length: 128
+results_csv: reproduce_table3/results/table3_runs.csv
+quantization:
+  load_in_4bit: false
+  load_in_8bit: false
+  quant_type: none
+  double_quant: false
+lora:
+  enabled: false
+  r: 16
+  alpha: 64
+  dropout: 0.0
+  target_modules: all-linear
+training:
+  output_dir: reproduce_table3/outputs/table3_full/t5_780m_bf16
+  learning_rate: 0.0002
+  per_device_train_batch_size: 1
+  per_device_eval_batch_size: 1
+  gradient_accumulation_steps: 16
+  num_train_epochs: 1
+  max_steps: 10000
+  logging_steps: 10
+  save_strategy: steps
+  optim: paged_adamw_32bit
+  lr_scheduler_type: constant
+  warmup_ratio: 0.03
+  max_grad_norm: 0.3
+  gradient_checkpointing: true
+  bf16: true

@@ -1,0 +1,33 @@
+task_group: t5_sni
+model_name_or_path: t5-small
+dataset_name: toy_sni
+dataset_config_name:
+use_toy_dataset: true
+method: qlora_nf4_dq
+seed: 42
+max_train_samples: 32
+max_eval_samples: 16
+source_max_length: 512
+target_max_length: 128
+generation_max_length: 128
+results_csv: reproduce_table3/results/table3_runs.csv
+quantization:
+  load_in_4bit: true
+  load_in_8bit: false
+  quant_type: nf4
+  double_quant: true
+lora:
+  r: 16
+  alpha: 64
+  dropout: 0.0
+  target_modules: ["q", "v"]
+training:
+  output_dir: reproduce_table3/outputs/t5_qlora_nf4
+  learning_rate: 0.0002
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 2
+  gradient_accumulation_steps: 1
+  num_train_epochs: 1
+  max_steps: 10
+  logging_steps: 1
+  bf16: true
