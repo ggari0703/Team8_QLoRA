@@ -19,3 +19,7 @@ timestamp,task_group,dataset,model_name,method,quant_type,double_quant,lora_r,lo
 2026-06-05T10:38:03.869861+00:00,roberta_glue,glue/qqp,FacebookAI/roberta-large,bf16_reference,none,False,,,,1e-05,4,4,,,42,glue_score,0.8246493513693314,4110.20
 2026-06-06T01:24:11.012667+00:00,roberta_glue,glue/rte,FacebookAI/roberta-large,bf16_reference,none,False,,,,2e-05,32,1,,,42,accuracy,0.7509025270758123,6215.11
 2026-06-06T01:24:11.012850+00:00,roberta_glue,glue/rte,FacebookAI/roberta-large,bf16_reference,none,False,,,,2e-05,32,1,,,42,glue_score,0.7509025270758123,6215.11
+2026-06-06T02:54:12.718095+00:00,roberta_glue,glue/qnli,FacebookAI/roberta-large,bf16_reference,none,False,,,,2e-05,32,1,,,42,accuracy,0.9308072487644151,6234.46
+2026-06-06T02:54:12.718307+00:00,roberta_glue,glue/qnli,FacebookAI/roberta-large,bf16_reference,none,False,,,,2e-05,32,1,,,42,glue_score,0.9308072487644151,6234.46
+2026-06-06T07:00:18.376092+00:00,roberta_glue,glue/mnli,FacebookAI/roberta-large,bf16_reference,none,False,,,,2e-05,32,1,,,42,accuracy,0.891492613346918,6215.80
+2026-06-06T07:00:18.376265+00:00,roberta_glue,glue/mnli,FacebookAI/roberta-large,bf16_reference,none,False,,,,2e-05,32,1,,,42,glue_score,0.891492613346918,6215.80
