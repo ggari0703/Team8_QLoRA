@@ -10,7 +10,6 @@
 * **데이터셋:** Alpaca dataset, FLAN v2 dataset, OASST dataset(7B)
   * Alpaca dataset - 52,002개 GPT-3.5로 생성한 instruction 데이터. 다양한 태스크 포함
   *  FLAN v2 dataset - 구글이 만든 대규모 instruction 데이터. 지식/추론 중심, 서브샘플링 한 450,000개만 사용  
-  *  OASST dataset - 19,846개 실제 사람이 만든 고품질 대화 데이터
 
 ## 실험 내용 및 결과 (Mean 5-shot MMLU Accuracy)
 * 57개 과목 (수학, 역사, 법학, 의학, 물리 등) 4지선다 문제로 LLM의 지식과 추론 능력을 평가하는 벤치마크
