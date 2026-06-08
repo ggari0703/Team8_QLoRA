@@ -31,10 +31,10 @@
 * 실험 결과 **BFloat16 > NFloat4 + DQ > Float4** 순의 성능 경향을 보이며, 이는 원본 논문의 결과와 일치.
 * 특히, 4bit 양자화(NF4/FP4)를 적용하더라도 16bit 모델 대비 성능 저하가 미미하여 매우 효율적인 학습이 가능함을 확인.
 * 논문의 일반화 성능을 하고자 사용한 데이터셋 OASST에서는 논문이 제시한 결과와 다른 **Float4 > BFloat16 > NFloat4 + DQ** 순으로 확인됨.
-** **OASST1**은 크기가 상대적으로 작고 실제 사람이 작성한 내용을 바탕으로 구성된 데이터셋으로 대화형 에이전트를 학습하기 위한 QA데이터셋
-** MMLU와 관련성이 거의 없는 데이터셋이라 성능을 유지하는데 도움이 되지 않을 확률이 높음
-** 여러 언어가 포함되어 있어 데이터 분포가 다양하고 대답에 편향이 발생할 가능성이 있어 finetuning 과정에서 가중치에도 영향을 미칠 가능성이 있음
-** ablation study에서 제시하는 "What is moreimportant: instruction finetuning dataset size or dataset quality?"에서 mmlu score는 dataset quality보다 size에 더 영향을 많이 받는다라는 내용을 다른 데이터셋과 score 차이를 통해서 확인할 수 있음
+**   **OASST1**은 크기가 상대적으로 작고 실제 사람이 작성한 내용을 바탕으로 구성된 데이터셋으로 대화형 에이전트를 학습하기 위한 QA데이터셋
+**   MMLU와 관련성이 거의 없는 데이터셋이라 성능을 유지하는데 도움이 되지 않을 확률이 높음
+**   여러 언어가 포함되어 있어 데이터 분포가 다양하고 대답에 편향이 발생할 가능성이 있어 finetuning 과정에서 가중치에도 영향을 미칠 가능성이 있음
+**   ablation study에서 제시하는 "What is moreimportant: instruction finetuning dataset size or dataset quality?"에서 mmlu score는 dataset quality보다 size에 더 영향을 많이 받는다라는 내용을 다른 데이터셋과 score 차이를 통해서 확인할 수 있음
 
 ##  실험 방법
 * 본 실험은 아래와 같은 명령어를 통해 수행되었습니다. (예시: LLaMA 7B + Alpaca)
